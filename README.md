@@ -2,10 +2,20 @@
 
 Date: 2024.8
 
-Goal: Develope and publish a web page by using Spring, MySQL(Local) and RDS(Server, AWS) 
-*Front: HTML+JS
+Goal: Develop and publish a web page by using Spring, MySQL(Local) and RDS(Server, AWS) 
 
-Includes:
-- Login: Spring Security(JWT), Oauth(Kakao)
-- Product Search: Open API(Naver)
-- My Product: Spring Data JPA, RDB(MySQL, RDS)
+Dev Environment:
+- Framework: Spring Boot 
+ * Spring Data JPA: JPA Auditing, Query Methods
+ * AOP: ExceptionHandler, TimerAop
+- DB: MySQL(Local), RDS(AWS)
+- A&A: Spring Security (JWT, Filter)
+- API: RestTemplate(Naver Open API), Oauth(Kakao Social Login)
+- Test: JUnit5, Mockito
+
+Features:
+- Search pruduct information via Naver API (Paging)
+- Save my products and their prices
+- Set my target prices
+- Categorize my products into my folders
+- Update their price regulary (Scheduler)
