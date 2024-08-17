@@ -1,5 +1,6 @@
 package com.sangjin.myselectshop.naver.controller;
 
+import com.sangjin.myselectshop.aop.Timer;
 import com.sangjin.myselectshop.naver.dto.ItemDto;
 import com.sangjin.myselectshop.naver.service.NaverApiService;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +18,7 @@ public class NaverApiController {
 
     private final NaverApiService naverApiService;
 
+    @Timer
     @GetMapping("/search")
     public List<ItemDto> searchItems(@RequestParam String query)  {
         return naverApiService.searchItems(query);

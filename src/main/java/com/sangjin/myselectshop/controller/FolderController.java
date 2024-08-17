@@ -2,9 +2,12 @@ package com.sangjin.myselectshop.controller;
 
 import com.sangjin.myselectshop.dto.FolderRequestDto;
 import com.sangjin.myselectshop.dto.FolderResponseDto;
+import com.sangjin.myselectshop.exception.RestApiException;
 import com.sangjin.myselectshop.security.UserDetailsImpl;
 import com.sangjin.myselectshop.service.FolderService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,5 +34,17 @@ public class FolderController {
     public List<FolderResponseDto> getFolders(@AuthenticationPrincipal UserDetailsImpl userDetails) {
         return folderService.getFolders(userDetails.getUser());
     }
+
+    // Global Exception ㅊㅓ리
+//    @ExceptionHandler({IllegalArgumentException.class})
+//    public ResponseEntity<RestApiException> handleException(IllegalArgumentException ex) {
+//        RestApiException restApiException = new RestApiException(ex.getMessage(), HttpStatus.BAD_REQUEST.value());
+//        return new ResponseEntity<>(
+//                // HTTP body
+//                restApiException,
+//                // HTTP status code
+//                HttpStatus.BAD_REQUEST
+//        );
+//    }
 
 }
