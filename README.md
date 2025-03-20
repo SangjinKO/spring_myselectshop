@@ -19,3 +19,5 @@ Features:
 - Set my target prices
 - Categorize my products into my folders
 - Update their price regulary (Scheduler)
+
+![image](https://github.com/user-attachments/assets/1cf7a628-e098-4d49-9538-4693fef7544a)
